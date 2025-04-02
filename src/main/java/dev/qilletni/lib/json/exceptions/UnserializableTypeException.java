@@ -1,6 +1,6 @@
-package is.yarr.qilletni.lib.json.exceptions;
+package dev.qilletni.lib.json.exceptions;
 
-import is.yarr.qilletni.api.exceptions.QilletniException;
+import dev.qilletni.api.exceptions.QilletniException;
 
 public class UnserializableTypeException extends QilletniException {
 

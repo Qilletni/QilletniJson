@@ -1,7 +1,7 @@
-module DemoLibrary.main {
-    requires Qilletni.qilletni.api.main;
+module QilletniJson.main {
+    requires qilletni.api;
     requires com.google.gson;
     requires org.slf4j;
 
-    exports is.yarr.qilletni.lib.json;
+    exports dev.qilletni.lib.json;
 }

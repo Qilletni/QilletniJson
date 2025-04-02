@@ -3,7 +3,7 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
-group = 'is.yarr.qilletni.lib.json'
+group = 'dev.qilletni.lib.json'
 version = '1.0.0'
 
 repositories {
@@ -15,7 +15,7 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 
-    compileOnly 'is.yarr.qilletni.api:qilletni-api:1.0.0-SNAPSHOT'
+    compileOnly 'dev.qilletni.api:qilletni-api:1.0.0-SNAPSHOT'
 
     implementation 'com.google.code.gson:gson:2.10.1'
 

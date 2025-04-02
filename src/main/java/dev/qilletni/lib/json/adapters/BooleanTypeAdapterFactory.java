@@ -1,4 +1,4 @@
-package is.yarr.qilletni.lib.json.adapters;
+package dev.qilletni.lib.json.adapters;
 
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
@@ -7,8 +7,8 @@ import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.JsonWriter;
-import is.yarr.qilletni.api.lang.types.BooleanType;
-import is.yarr.qilletni.api.lang.types.conversion.TypeConverter;
+import dev.qilletni.api.lang.types.BooleanType;
+import dev.qilletni.api.lang.types.conversion.TypeConverter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

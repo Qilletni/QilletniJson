@@ -1,4 +1,4 @@
-package is.yarr.qilletni.lib.json.adapters;
+package dev.qilletni.lib.json.adapters;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
@@ -8,16 +8,16 @@ import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import is.yarr.qilletni.api.lang.types.BooleanType;
-import is.yarr.qilletni.api.lang.types.EntityType;
-import is.yarr.qilletni.api.lang.types.IntType;
-import is.yarr.qilletni.api.lang.types.JavaType;
-import is.yarr.qilletni.api.lang.types.ListType;
-import is.yarr.qilletni.api.lang.types.QilletniType;
-import is.yarr.qilletni.api.lang.types.StringType;
-import is.yarr.qilletni.api.lang.types.conversion.TypeConverter;
-import is.yarr.qilletni.api.lang.types.entity.EntityInitializer;
-import is.yarr.qilletni.lib.json.exceptions.UnserializableTypeException;
+import dev.qilletni.api.lang.types.BooleanType;
+import dev.qilletni.api.lang.types.EntityType;
+import dev.qilletni.api.lang.types.IntType;
+import dev.qilletni.api.lang.types.JavaType;
+import dev.qilletni.api.lang.types.ListType;
+import dev.qilletni.api.lang.types.QilletniType;
+import dev.qilletni.api.lang.types.StringType;
+import dev.qilletni.api.lang.types.conversion.TypeConverter;
+import dev.qilletni.api.lang.types.entity.EntityInitializer;
+import dev.qilletni.lib.json.exceptions.UnserializableTypeException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

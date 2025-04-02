@@ -1,4 +1,4 @@
-package is.yarr.qilletni.lib.json.adapters;
+package dev.qilletni.lib.json.adapters;
 
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
@@ -7,40 +7,37 @@ import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.JsonWriter;
-import is.yarr.qilletni.api.lang.types.IntType;
-import is.yarr.qilletni.api.lang.types.conversion.TypeConverter;
+import dev.qilletni.api.lang.types.DoubleType;
+import dev.qilletni.api.lang.types.conversion.TypeConverter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
-public class IntegerTypeAdapterFactory implements TypeAdapterFactory {
+public class DoubleTypeAdapterFactory implements TypeAdapterFactory {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(IntegerTypeAdapterFactory.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DoubleTypeAdapterFactory.class);
     
     private final TypeConverter typeConverter;
     
-    public IntegerTypeAdapterFactory(TypeConverter typeConverter) {
+    public DoubleTypeAdapterFactory(TypeConverter typeConverter) {
         this.typeConverter = typeConverter;
     }
 
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
-        if (typeToken.getRawType() != Integer.class && !IntType.class.isAssignableFrom(typeToken.getRawType())) {
-            LOGGER.debug("Type {} is not assignable from Integer or IntType, returning null", typeToken.getRawType());
+        if (typeToken.getRawType() != Double.class && !DoubleType.class.isAssignableFrom(typeToken.getRawType())) {
             return null; // Return null so Gson will use default behavior
         }
-        
-        LOGGER.debug("Creating type adapter for {}", typeToken.getRawType());
         
         return new TypeAdapter<>() {
             // Write both I guess
             @Override
             public void write(JsonWriter out, T value) throws IOException {
-                if (value instanceof IntType integerType) {
-                    out.value(integerType.getValue());
+                if (value instanceof DoubleType doubleType) {
+                    out.value(doubleType.getValue());
                 } else {
-                    out.value(((Integer) value).intValue());
+                    out.value(((Double) value).doubleValue());
                 }
             }
 
@@ -52,7 +49,7 @@ public class IntegerTypeAdapterFactory implements TypeAdapterFactory {
                     return null;
                 }
 
-                return (T) typeConverter.convertToQilletniType(in.nextInt());
+                return (T) typeConverter.convertToQilletniType(in.nextDouble());
             }
         };
     }
