@@ -1,6 +1,7 @@
-name: json
+name: qilletni/json
 version: 1.0.0
 author: Adam Yarris
+description: JSON serialization/deserialization implementation for Qilletni
 native_classes:
   - dev.qilletni.lib.json.Json
 dependencies: []
