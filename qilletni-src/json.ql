@@ -1,8 +1,21 @@
+/**
+ * The primary interface for JSON serialization/deserialization.
+ */
 entity JsonConverter {
-    
+
+    /**
+     * The internal Gson object.
+     */
     java _gson
+
+    /**
+     * If the converted JSON is pretty printed.
+     */
     boolean prettyPrint
-    
+
+    /**
+     * Creates the main JSON converter entity.
+     */
     JsonConverter(_gson, prettyPrint)
     
     /**
