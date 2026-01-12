@@ -5,4 +5,4 @@ description: JSON serialization/deserialization implementation for Qilletni
 native_classes:
   - dev.qilletni.lib.json.Json
 dependencies:
-  qilletni/std: 1.0.0-SNAPSHOT
+  qilletni/std: 1.0.0
